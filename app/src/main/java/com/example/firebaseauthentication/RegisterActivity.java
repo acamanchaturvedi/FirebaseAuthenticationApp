@@ -54,9 +54,10 @@ public class RegisterActivity extends AppCompatActivity {
         if(TextUtils.isEmpty((email))) {
             etRegEmail.setError("Email cannot be empty");
             etRegEmail.requestFocus();
-        }/*else if(!email.endsWith("@intimetec.com")) {
-            etRegEmail.setError("ITT employees only fam!");
-            etRegEmail.requestFocus();}*/ else if(TextUtils.isEmpty(password)) {
+        }else if(!email.endsWith("@intimetec.com")) {
+            etRegEmail.setError("Only ITT employees can register");
+            etRegEmail.requestFocus();
+        } else if(TextUtils.isEmpty(password)) {
             etRegPassword.setError("Password cannot be empty");
             etRegPassword.requestFocus();
         } else {
